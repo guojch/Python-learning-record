@@ -36,7 +36,8 @@ for i, value in enumerate(['A', 'B', 'C']):
 for x, y in [(1, 1), (2, 4), (3, 9)]:
     print(x, y)
 
-# 3、列表生成式
+# 3、推导式
+# 列表推导式
 # 运用列表生成式，可以快速生成list，可以通过一个list推导出另一个list，而代码却十分简洁。
 [x * x for x in range(1, 11)]
 [x * x for x in range(1, 11) if x % 2 == 0]
@@ -58,6 +59,10 @@ print([s.lower() for s in L])
 # 在一个列表生成式中，for前面的if ... else是表达式，而for后面的if是过滤条件，不能带else。
 [x for x in range(1, 11) if x % 2 == 0]
 [x if x % 2 == 0 else -x for x in range(1, 11)]
+
+# 字典推导式
+z = {i: 0 for i in [1, 2, 3]}
+print(z)
 
 # 4、生成器
 # 通过列表生成式，我们可以直接创建一个列表。但是，受到内存限制，列表容量肯定是有限的。
@@ -146,4 +151,3 @@ isinstance(iter('abc'), Iterator)
 # 可以把这个数据流看做是一个有序序列，但我们却不能提前知道序列的长度，只能不断通过next()函数实现按需计算下一个数据，所以Iterator的计算是惰性的，只有在需要返回下一个数据时它才会计算。
 
 # Iterator甚至可以表示一个无限大的数据流，例如全体自然数。而使用list是永远不可能存储全体自然数的。
-
