@@ -1,4 +1,4 @@
-# 字典
+# 字典（无序）
 
 d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
 d['Michael']
